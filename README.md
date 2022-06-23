@@ -38,7 +38,7 @@ End If
                 tickerindex = (tickerindex + 1)
           End If
 ```
-The above code detrmines the starting and ending price for a given year for a given ticker.  These values are used in the following code to determine the overall return for the year.
+The above code determines the starting and ending prices for a given year for a given ticker.  These values are used in the following code to determine the overall return for the year.
 
 ```
 Cells(4 + j, 3).Value = (tickerEndingPrices(j) / tickerStartingPrices(j)) - 1
@@ -50,12 +50,12 @@ This anlaysis shows that 2017 was a pretty good year for the sampled market as a
 ![2017_Returns](https://github.com/Beardlow/stock-analysis/blob/main/2017_Returns.png)
 
 ##### 2018 Results
-The Analysis fo the year 2018 tells a very different story. Only two stocks showed a positive return for the year 2018. These stocks are shown as tickers "ENPH" and "RUN". This may be indicative of a broader market event or slowdown; however, 2018 had roughly 139 million more trades occur amongst the stock listed than did 2017. A more detailed look at 2018 and the market environmental factors for the year may be needed. It could also be inferred that the tickers ENPH and RUN are more resilient to market downturns than the other stocks analyzed.
+The analysis for the year 2018 tells a very different story. Only two stocks showed a positive return for the year 2018. These stocks are shown as tickers "ENPH" and "RUN". This may be indicative of a broader market event or slowdown; however, 2018 had roughly 139 million more trades occur amongst the stock listed than did 2017. A more detailed look at 2018 and the market environmental factors for the year may be needed. It could also be inferred that the tickers ENPH and RUN are more resilient to market downturns than the other stocks analyzed depending on what is found through additional research.
 
 ![2018 Returns](https://github.com/Beardlow/stock-analysis/blob/main/2018_Returns.png)
 
 #### Performance of Results
-The comperter processing time needed to run the results for both 2017 and 2018 were very similar or exactly the same. This is most likely due to the amount of data for both 2017 and 2018 being the same. See performance results for both year's analyses below.
+The computer processing time needed to run the results for both 2017 and 2018 were very similar or exactly the same. This is most likely due to the amount of data for both 2017 and 2018 being the same. See performance results for both year's analyses below.
 
 ##### 2017 Performance
 ![2017 Analysis Performance](https://github.com/Beardlow/stock-analysis/blob/main/VBA_Challenge_2017.png)
@@ -65,7 +65,7 @@ The comperter processing time needed to run the results for both 2017 and 2018 w
 
 ### Summary
 
-#### What are the advantages or disadvantages of refactoring code?
+#### What are the Advantages or Disadvantages of Refactoring Code?
 
 #### Advantages
 
