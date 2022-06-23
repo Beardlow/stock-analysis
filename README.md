@@ -7,12 +7,49 @@ This project was given to us by a financial advisor colleague who was in need of
 
 ### Results
 
-#### 2017 Results
+#### Code Used for Analysis
+
+Some important metrics are captured for each of the listed stocks. These metrics are the total vlome traded for a given year and and performance for a given year. The code used to calculate these metrics is below.
+
+##### Total Volume Code
+
+```
+If Cells(i, 1).Value = tickers(tickerindex) Then
+    tickerVolumes(tickerindex) = tickerVolumes(tickerindex) + Cells(i, 8).Value
+End If
+```
+
+##### Total Retun Code
+
+```
+If Cells(i - 1, 1).Value <> tickers(tickerindex) And Cells(i, 1).Value = tickers(tickerindex) Then
+    tickerStartingPrices(tickerindex) = Cells(i, 6).Value
+End If
+                    
+'3c) check if the current row is the last row with the selected ticker
+    'If the next rowâ€™s ticker doesnâ€™t match, increase the tickerIndex.
+          If Cells(i + 1, 1).Value <> tickers(tickerindex) And Cells(i, 1).Value = tickers(tickerindex) Then
+              tickerEndingPrices(tickerindex) = Cells(i, 6).Value
+          End If
+                
+'3d Increase the tickerIndex
+                  
+          If Cells(i, 1).Value = tickers(tickerindex) And Cells(i + 1, 1).Value <> tickers(tickerindex) Then
+                tickerindex = (tickerindex + 1)
+          End If
+```
+The above code detrmines the starting and ending price for a given year for a given ticker.  These values are used in the following code to determine the overall return for the year.
+
+```
+Cells(4 + j, 3).Value = (tickerEndingPrices(j) / tickerStartingPrices(j)) - 1
+```
+
+##### 2017 Results
 This anlaysis shows that 2017 was a pretty good year for the sampled market as a whole; however, the execption to this is the stock with ticker "TERP". TERP had a 7.2% decrease in the stock price from the beginning of the year 2017 to the end of the year 2017. Every other stock listed had a positive return for the year 2017.
 
 ![2017_Returns](https://github.com/Beardlow/stock-analysis/blob/main/2017_Returns.png)
 
-#### 2018 Results
+##### 2018 Results
 The Analysis fo the year 2018 tells a very different story. Only two stocks showed a positive return for the year 2018. These stocks are shown as tickers "ENPH" and "RUN". This may be indicative of a broader market event or slowdown; however, 2018 had roughly 139 million more trades occur amongst the stock listed than did 2017. A more detailed look at 2018 and the market environmental factors for the year may be needed. It could also be inferred that the tickers ENPH and RUN are more resilient to market downturns than the other stocks analyzed.
 
 ![2018 Returns](https://github.com/Beardlow/stock-analysis/blob/main/2018_Returns.png)
