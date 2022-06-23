@@ -24,7 +24,7 @@ The comperter processing time needed to run the results for both 2017 and 2018 w
 ![2017 Analysis Performance](https://github.com/Beardlow/stock-analysis/blob/main/VBA_Challenge_2017.png)
 
 ##### 2018 Performance
-![2018 Analysis Performance}(https://github.com/Beardlow/stock-analysis/blob/main/VBA_Challenge_2018.png)
+![2018 Analysis Performance](https://github.com/Beardlow/stock-analysis/blob/main/VBA_Challenge_2018.png)
 
 ### Summary
 
